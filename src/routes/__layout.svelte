@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from '../components/Header.svelte';
+	import 'normalize.css';
 	// import { theme } from './stores';
 	// import { onMount } from 'svelte';
 
@@ -49,7 +50,7 @@
 		--textAccent: var(--purpleBlue);
 		--lineColor: var(--grey);
 		--cardBg: var(--secondary);
-		--headerBackground: var(--darkGrey);
+		--headerBackground: var(--lightShade);
 		--footerBackground: var(--darkGrey);
 		--linkHover: var(--purpleBlue);
 		--lightHairLine: var(--lightGrey);
@@ -114,6 +115,23 @@
 
 		/* Color Theme */
 		--colorScheme: 'light';
+	}
+
+	:global(html) {
+		box-sizing: border-box;
+		font-size: 10px;
+	}
+
+	:global(*) {
+		box-sizing: inherit;
+	}
+
+	:global(*:before) {
+		box-sizing: inherit;
+	}
+
+	:global(*:after) {
+		box-sizing: inherit;
 	}
 
 	:global(figure) {
